@@ -19,6 +19,12 @@ jobs:
         run: |
           pip install -r app/requirements.txt
 
+      - name: Use GitHub Secret
+        run: |
+          echo "Secret is set"
+        env:
+          APP_SECRET_KEY: ${{ secrets.APP_SECRET_KEY }}
+
       - name: Run SAST (Bandit)
         run: |
           pip install bandit
