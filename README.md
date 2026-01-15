@@ -22,5 +22,7 @@ Every push triggers:
 ## Security Gates
 The pipeline automatically fails if Bandit detects security issues in the code, enforcing secure coding practices.
 
+## Secrets Management
+Sensitive values are stored securely using GitHub Secrets and injected into the CI pipeline as environment variables.
 
 Secret scanning is performed using TruffleHog to detect hardcoded credentials before they reach production.
