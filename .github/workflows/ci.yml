@@ -19,6 +19,11 @@ jobs:
         run: |
           pip install -r app/requirements.txt
 
+      - name: Run SAST (Bandit)
+        run: |
+          pip install bandit
+          bandit -r app
+
       
       - name: Syntax check
         run: |
